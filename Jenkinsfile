@@ -1,11 +1,14 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('Clone') {
             steps{
             git branch: 'master',
                 url: 'https://github.com/Newmi1988/httpserv'
-            def customImage = docker.build("go-http-server")
+            }
+        stage('Build') {
+            steps{
+                docker.build("go-http-server")
             }
         }
     }
