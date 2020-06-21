@@ -9,7 +9,9 @@ pipeline {
         }
         stage('Build') {
             steps{
-                docker.build("go-http-server")
+                script{
+                    docker.build("go-http-server")
+                }
             }
         }
     }
