@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('Clone') {
             steps{
-            git branch: 'master',
-                url: 'https://github.com/Newmi1988/httpserv'
+                git branch: 'master',
+                    url: 'https://github.com/Newmi1988/httpserv'
             }
         stage('Build') {
             steps{
